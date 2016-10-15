@@ -31,6 +31,6 @@ When image capture is done, click one of the buttons under "Copy as..." label.
 ##Installation
 ArduboyImager is developed on [openFrameworks](http://openframeworks.cc/).
 
-You need to download and install openFrameworks 0.9.3 or newer.
+You need to download and install openFrameworks 0.9.3 or newer to build ArduboyImager.
 
 Although openFrameworks is a cross-platform toolkit, I have tested only on Windows7.
