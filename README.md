@@ -6,7 +6,7 @@ ArduboyImager is a tool to create bitmap data which can be used in Arduboy sketc
 
 You can load an image file, scale it, adjust contrast and brightness, then crop it so as to fit to Arduboy's screen.
 
-Color pixels can be converted to black and white dots using three differnt dithering method.
+Color pixels can be converted to black and white dots using three differnt dithering method. (Thanks to [ofxDither](http://www.julapy.com/blog/2011/03/09/ofxdither/).)
 
 ##Instructions
 
