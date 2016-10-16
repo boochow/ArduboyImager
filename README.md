@@ -35,4 +35,4 @@ You need to download and install openFrameworks 0.9.3 or newer to build ArduboyI
 
 Place source code folder into ```of_v0.9.3\apps\myApps``` folder.
 
-Although openFrameworks is a cross-platform toolkit, I have tested only on Windows7.
+Although openFrameworks is a cross-platform toolkit, I have tested only on Windows 7 + VisualStudio 2015.
