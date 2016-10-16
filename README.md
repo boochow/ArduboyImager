@@ -33,4 +33,6 @@ ArduboyImager is developed on [openFrameworks](http://openframeworks.cc/).
 
 You need to download and install openFrameworks 0.9.3 or newer to build ArduboyImager.
 
+Place source code folder into of_v0.9.3\apps\myApps folder.
+
 Although openFrameworks is a cross-platform toolkit, I have tested only on Windows7.
