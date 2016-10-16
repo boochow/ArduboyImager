@@ -3,7 +3,8 @@
 ##Description
 
 ArduboyImager is an image conversion tool for Arduboy.
-It generates ready-to-use bitmap data which you can embed in your program sketch.
+It generates ready-to-use bitmap data from JPEG or PNG image files.
+Since generated data is in C language array format, you can easily embed it in your program sketch.
 
 You can load an image file, scale it, adjust contrast and brightness, then crop it so as to fit to Arduboy's screen and convert it to C language source code.
 
