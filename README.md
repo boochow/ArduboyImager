@@ -2,7 +2,7 @@
 
 ##Description
 
-ArduboyImager is a tool to create bitmap data which can be used in Arduboy sketches.
+ArduboyImager is a tool to create bitmap data which as C language source code which can be used in Arduboy sketches.
 
 You can load an image file, scale it, adjust contrast and brightness, then crop it so as to fit to Arduboy's screen.
 
