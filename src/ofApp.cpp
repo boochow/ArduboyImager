@@ -151,6 +151,9 @@ void ofApp::draw(){
 void ofApp::keyPressed(int key){
 	switch (key)
 	{
+	case ' ':
+		openFileClicked();
+		break;
 	case '1':
 		ditherBayer = true;
 		break;
@@ -186,6 +189,9 @@ void ofApp::keyPressed(int key){
 	case OF_KEY_UP:
 		offset.y = offset.y - 1;
 		break;
+	case OF_KEY_RETURN:
+		processCapture();
+		break;
 	}
 	if (img.isAllocated())
 		processDither();
@@ -216,9 +222,6 @@ void ofApp::updateImages() {
 }
 //--------------------------------------------------------------
 void ofApp::keyReleased(int key){
-	if (key == ' ') {
-		openFileClicked();
-	}
 }
 
 //--------------------------------------------------------------
@@ -277,21 +280,28 @@ void ofApp::mouseDragged(int x, int y, int button){
 }
 
 //--------------------------------------------------------------
+
+void ofApp::processCapture() {
+	if (bw_img.isAllocated()) {
+		capture.clear();
+		ofRectangle bounds = ofRectangle(0, 0, bw_img.getWidth(), bw_img.getHeight());
+		ofRectangle sub = ofRectangle(0, 0, 512, 600);
+		sub.translate(offset);
+		sub = sub.getIntersection(focus + offset);
+		sub = sub.getIntersection(bounds);
+		capture.cropFrom(bw_img, sub.x, sub.y, sub.width, sub.height);
+	}
+}
+
+//--------------------------------------------------------------
+
 void ofApp::mousePressed(int x, int y, int button){
 	if ((x < 512) && (y < 600)) {
 		switch (button)
 		{
 		case 0:
 			clickPos = ofPoint(x, y);
-			if (bw_img.isAllocated()) {
-				capture.clear();
-				ofRectangle bounds = ofRectangle(0, 0, bw_img.getWidth(), bw_img.getHeight());
-				ofRectangle sub = ofRectangle(0, 0, 512, 600);
-				sub.translate(offset);
-				sub = sub.getIntersection(focus + offset);
-				sub = sub.getIntersection(bounds);
-				capture.cropFrom(bw_img, sub.x, sub.y, sub.width, sub.height);
-			}
+			processCapture();
 			break;
 		default:
 			break;

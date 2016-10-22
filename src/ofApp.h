@@ -32,6 +32,7 @@ class ofApp : public ofBaseApp{
 
 		void processOpenFileSelection(ofFileDialogResult openFileResult);
 		void processDither();
+		void processCapture();
 		void updateImages();
 		void copyToClipboard(string &text);
 		ofImage original;
