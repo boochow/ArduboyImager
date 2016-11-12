@@ -349,7 +349,7 @@ void ofxDither :: prepImagesForGreyscale ( ofImage& imageIn, ofImage& imageOut )
 	
 	if( imageIn.getImageType() == OF_IMAGE_GRAYSCALE)	// already greyscale.
 	{
-		imageInPixels = imageIn.getPixels();
+		imageInPixels = (unsigned char *)imageIn.getPixels().getData();
 	}
 	else					// convert to greyscale.
 	{
@@ -357,7 +357,7 @@ void ofxDither :: prepImagesForGreyscale ( ofImage& imageIn, ofImage& imageOut )
         imageInBW.setFromPixels( imageIn.getPixelsRef() );
 		imageInBW.setImageType( OF_IMAGE_GRAYSCALE );
 		
-		imageInPixels = imageInBW.getPixels();
+		imageInPixels = (unsigned char *) imageInBW.getPixels().getData();
 	}
 	
 	//--- image out.

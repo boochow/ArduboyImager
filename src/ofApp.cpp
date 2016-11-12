@@ -60,7 +60,7 @@ void ofApp::setup() {
 }
 void ofApp::openFileClicked()
 {
-	ofFileDialogResult openFileResult = ofSystemLoadDialog("Select a jpg or png");
+	ofFileDialogResult openFileResult = ofSystemLoadDialog("Select a jpg or png or bmp");
 	if (openFileResult.bSuccess) {
 		processOpenFileSelection(openFileResult);
 	}
@@ -231,7 +231,7 @@ void ofApp::processOpenFileSelection(ofFileDialogResult openFileResult) {
 
 	if (file.exists()) {
 		string fileExtension = ofToUpper(file.getExtension());
-		if (fileExtension == "JPG" || fileExtension == "PNG") {
+		if (fileExtension == "JPG" || fileExtension == "PNG" || fileExtension == "BMP") {
 			original.load(openFileResult.getPath());
 			imgContrast = 1.0;
 			imgBrightness = 0;
@@ -341,7 +341,7 @@ void ofApp::dragEvent(ofDragInfo dragInfo){
 
 
 //--------------------------------------------------------------
-void ofApp::copyToClipboard(string &text) {
+void ofApp::copyToClipboard(const string &text) {
 	ofGetWindowPtr()->setClipboardString(text);
 }
 

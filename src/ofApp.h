@@ -34,7 +34,7 @@ class ofApp : public ofBaseApp{
 		void processDither();
 		void processCapture();
 		void updateImages();
-		void copyToClipboard(string &text);
+		void copyToClipboard(const string &text);
 		ofImage original;
 		ofImage img;
 		ofImage grey_img;
