@@ -10,7 +10,7 @@ You can load an image file, scale it, adjust contrast and brightness, then crop 
 
 Color pixels are converted to black and white dots using three differnt dithering method. (Thanks to [ofxDither](http://www.julapy.com/blog/2011/03/09/ofxdither/).)
 
-##Instructions
+## Instructions
 
 Click "Open File..." button or hit space bar to open an image file. (in JPEG or PNG format)
 
@@ -30,7 +30,7 @@ When image capture is done, click one of the buttons under "Copy as..." label.
 "a C array" copys C source code to clipboard.
 "AbShell commands" copys set of command lines for [AbShell](https://github.com/boochow/abshell). 
 
-##Installation
+## Installation
 ArduboyImager is developed on [openFrameworks](http://openframeworks.cc/).
 
 You need to download and install openFrameworks 0.9.3 or newer to build ArduboyImager.
@@ -38,5 +38,5 @@ You need to download and install openFrameworks 0.9.3 or newer to build ArduboyI
 Place source code folder into ```of_v0.9.3\apps\myApps``` folder.
 
 Although openFrameworks is a cross-platform toolkit, I have tested only on Windows 7 + VisualStudio 2015.
-##Video
+## Video
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=vK3rL55fzvA" target="_blank"><img src="http://img.youtube.com/vi/vK3rL55fzvA/0.jpg" alt="IMAGE ALT TEXT HERE" width="240" height="180" border="10" /></a>
