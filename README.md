@@ -1,6 +1,6 @@
 # ArduboyImager
 
-##Description
+## Description
 
 ArduboyImager is an image conversion tool for Arduboy.
 It generates ready-to-use bitmap data from JPEG or PNG image files.
