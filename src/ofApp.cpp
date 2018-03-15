@@ -206,7 +206,7 @@ void ofApp::updateImages() {
 		img.resize(original.getWidth() * scale, original.getHeight() * scale);
 		ofPixels p = img.getPixels();
 		int b = 128 + imgBrightness;
-		int s = img.getWidth() * img.getHeight() * 3;
+		int s = img.getWidth() * img.getHeight() * p.getBytesPerPixel();
 		for (int i = 0; i < s; i++) {
 			int c = p[i] - 128;
 			c = imgContrast * c + b;
